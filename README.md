@@ -49,6 +49,6 @@ An interactive 3D web-based simulation built with **Three.js** that demonstrates
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/feben-g/pendulum-wave-simulation.git
+   git clone https://github.com/FEBEN-G/Pendulum-and-Wave-Motion-Simulation.git
    cd pendulum-wave-simulation
 
