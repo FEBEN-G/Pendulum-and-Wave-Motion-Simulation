@@ -64,6 +64,21 @@ for (let i = 0; i < cubeCount; i++) {
   waveCubes.push(cube);
 }
 
+// Ground Plane with Texture
+const textureLoader = new THREE.TextureLoader();
+const groundTexture = textureLoader.load('https://threejs.org/examples/textures/checker.png');
+groundTexture.wrapS = THREE.RepeatWrapping;
+groundTexture.wrapT = THREE.RepeatWrapping;
+groundTexture.repeat.set(10, 10);
+
+const groundGeometry = new THREE.PlaneGeometry(30, 30);
+const groundMaterial = new THREE.MeshStandardMaterial({ map: groundTexture });
+const ground = new THREE.Mesh(groundGeometry, groundMaterial);
+ground.rotation.x = -Math.PI / 2;
+ground.position.y = -4.5;
+ground.receiveShadow = true;
+scene.add(ground);
+
 // Animation
 let time = 0;
 function animate() {
